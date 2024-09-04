@@ -1,0 +1,15 @@
+# S-3600   !S-36 time dependent model
+211
+-2
+2004.40  -185.3
+2018.54   453.6
+# S-36
+211
+1
+0.976270E-04	!scale change found 97.6 +/- 7.5 ppm from Haanja-Toila AG baseline
+# G-191
+159
+1
+0.673860E-03	! 673.9 +/- 30.4 ppm
+1
+70.9412,   66.7742,  185.7637

@@ -1,0 +1,43 @@
+# Adjusted results for project: Haanja-Toila_base2010_S36.proj                                                                                                                                                                                                                                 
+
+# ======= Fixed stations and adjustment residuals (mGal) =======
+# seq   stat      fix g   sigma   weight        adj g       res  statname
+# no      ID             (sc_std=1/  5.0)
+  1    80003  981759.6697 0.0006    6.25    981759.6718   0.0021  TõravereAG  
+  2    80702  981678.8601 0.0008    3.52    981678.8581  -0.0020  HaanjaAG    
+  3    80704  981848.7583 0.0008    3.52    981848.7565  -0.0018  ToilaAG     
+
+# ======= Adjusted results with standard deviations (mGal) ======
+# seq    stat     gravity     std      statname
+# no       ID             (sc_std=  5.0)
+   1    80036  981813.9444  0.0031     LohusuuGR   
+
+ === Calibration results of gravimeters ===
+ Instrument no: 36
+ # Terms of polynomial calibration function:
+ # deg.  coef. with std.dev      t-stat.
+  1  0.976270E-04  0.748444E-05    13.0  
+( 1  0.9999023730  0.0000074844)  -> 1st term 1-coef. value (compatible with deg=99 term)
+
+=== Statistics of adjustment ===
+ Adjustment observations:   364
+ Stations:                    4
+ Total unknowns:             16
+ Degrees of freedom:        348
+ SIGMA1 (apriori st.dev. of unit weight, mGal)    :   0.0015
+ SIGMA2 (aposteriori st.dev. of unit weight, mGal):   0.0016
+
+=== Statistical tests ===
+ Confidence level:      0.950
+
+== Critical t-value for statistical parameter testing: t-crit=  1.97
+ NB! If t-stat > t-crit -> parameter significant, else with " ! " mark.
+
+== Chi-square test of the SIGMA1 (variance factor) ==
+ Statistic (norm. with dof): X^2 =  1.13
+                 X^2 lower value =  0.86
+                 X^2 upper value =  1.15  ->  test PASSED!
+
+== Information Criteria AIC, BIC as relative measures
+== to select the best adjustment (the lower is better):
+ # AIC =     -10.31, BIC =      55.94

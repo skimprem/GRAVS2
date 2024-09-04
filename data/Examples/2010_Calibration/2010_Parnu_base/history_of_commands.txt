@@ -1,0 +1,34 @@
+cd ..\2010_Parnu_base\S36
+To make txt file with name list of obs files, use batch script 'makelist'
+>makelist obs
+Now execute batch 'reduce'
+>reduce obslist T
+copy results to S36_grredu3_uncalibrated_results.zip
+change cal.parameter F->T and run
+>Grredu303<grredu3.inp>grredu3.log
+>makelist redu
+>adjust redulist Parnu_base2010_S36 FIXED T	
+
+>cd ..\G191
+>reduce 2010-04-21_23_G191.obs
+Results in 'G191_grredu3_nocalibration.ZIP'
+>adjust 2010-04-21_23_G191.redu Parnu_base2010_G191
+Results packed as 'G191_ADJ0_free.ZIP'
+After modifing *.proj, *.par, FIXED, *.inp (graphscale 1 -> 3) another run (previous command works also)
+>gradj305 < Parnu_base2010_G191_gradj3.inp > gradj3.log
+Results packed as 'G191_ADJ1_fixed.ZIP'
+Differences from S36 results : in Are -100, Lodja -140, PJaagupi -47, Ristiküla -32 uGal - nonlinear pattern, probably LCR periodic function
+
+cd ..\Adj_comb
+Copy redulist from \S36 and add path of G191 redu file, copy also FIXED file
+now run (several times until good adjustment results obtained)
+>adjust redulist Parnu_base2010 FIXED T
+Results in 'Adj_comb_ADJ0.zip', ...
+
+>cd ..\G191
+>reduce 2010-04-21_23_G191.obs  (when 'grredu3.inp' is made, change cal F->T)
+OR 
+change cal.parameter F->T in 'grredu3.inp' and run
+>Grredu303<grredu3.inp>grredu3.log
+>adjust 2010-04-21_23_G191.redu Parnu_base2010_G191
+Differences from S36 results : in Are +6, Lodja -4, PJaagupi -2, Ristiküla +7 uGal -> OK

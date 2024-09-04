@@ -1,0 +1,96 @@
+2022-01-05, 23:10:32.06
+-------------------------------------------------------
+*** GRREDU3, ver. 2021-03-03 ***
+ ------------------------------------------------------
+ Insert timezone, epoch:
+  timezone = 0: UT
+           =+2: in Estonia (+3 in Summer)
+  epoch = YYYY-MM-DD - important for temporal gravity (gdot) correction
+  0  2000-01-01
+ Epoch for computations:  2000.00273
+ ------------------------------------------------------
+ Insert ltide,lpres,lfair,ltime,lcali,lpmot:
+ T F T F T F
+ No atm.pressure correction applied!
+ No g time change correction applied!
+ No polar motion correction applied!
+ ------------------------------------------------------
+ Insert iprint,imodel,irigid:
+ NB! Suggested values are 0 2 0 -> tidal potential development table not printed + TAMURA(1987) development with 1200 waves + elastic Earth model tides
+ 0 2 0 -> Tidal potential development used: TAMURA 1987  
+ ------------------------------------------------------
+ Insert single admittance value pcoef [uGal/hPa] for the reduction of the atm.pressure (e.g. -0.3):
+ Reduction of the atm.pressure using the coef. -0.3
+ ------------------------------------------------------
+ Read input files...
+ station coordinate file:
+..\coords.txt                                                                                                                                                                                                                                                  
+ station tide param.file: 
+d:\GRAVS2\share\coords.tide                                                                                                                                                                                                                                    
+  ETCPOT.DAT file: 
+d:\GRAVS2\share\ETCPOT.DAT                                                                                                                                                                                                                                     
+  IERS(C04) time series file (for polar motion correction): 
+d:\GRAVS2\share\eopc04.2000-now                                                                                                                                                                                                                                
+  LCR calibr. table file: 
+d:\GRAVS2\share\LCRmeter.tab                                                                                                                                                                                                                                   
+  gravimeter param. file: 
+d:\GRAVS2\share\gmeters.par                                                                                                                                                                                                                                    
+Read obs.files (max.150 files per project)...
+ ------------------------------------------------------
+
+input file no   1 : 2010-03-17_G191.obs                                                                                                                                                                                                                                            
+output file: 2010-03-17_G191.redu                                                                                                                                                                                                                                           
+
+ NB! All times in UT
+
+# G-191   Gulf of Riga 2010 K.Türk EULS                                         
+ Instrument number:  191
+Position of gravimeter reference point:  159.0 mm
+ Degree of calibration function= 1
+ Linear/polynomial calibration correction function:
+degree, term =   1  0.000674
+ Periodic correction was applied using following data:
+  Period(C.U.)  Amplitude(uGal)  Zero Phase
+      70.9412      66.7742     185.7637
+
+ReiuGR      : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3238.00    0.00
+Accordingly, parameters with CGS units: -323.80 uGal/m,     0.00 uGal/m^2
+
+Rannametsa  : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3086.00    0.00
+Accordingly, parameters with CGS units: -308.60 uGal/m,     0.00 uGal/m^2
+!!! Station Rannametsa   not found in d:\GRAVS2\share\coords.tide                                                                                                                                                                                                                                    
+    ->unit values ( 1.16, 0.00) used for tidal wavegroups !!!
+
+vana-1118   : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3086.00    0.00
+Accordingly, parameters with CGS units: -308.60 uGal/m,     0.00 uGal/m^2
+!!! Station vana-1118    not found in d:\GRAVS2\share\coords.tide                                                                                                                                                                                                                                    
+    ->unit values ( 1.16, 0.00) used for tidal wavegroups !!!
+
+vana-1112   : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3086.00    0.00
+Accordingly, parameters with CGS units: -308.60 uGal/m,     0.00 uGal/m^2
+!!! Station vana-1112    not found in d:\GRAVS2\share\coords.tide                                                                                                                                                                                                                                    
+    ->unit values ( 1.16, 0.00) used for tidal wavegroups !!!
+
+Võiste      : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3086.00    0.00
+Accordingly, parameters with CGS units: -308.60 uGal/m,     0.00 uGal/m^2
+!!! Station Võiste       not found in d:\GRAVS2\share\coords.tide                                                                                                                                                                                                                                    
+    ->unit values ( 1.16, 0.00) used for tidal wavegroups !!!
+
+Correction(uGal) min     max   range  average
+----------------------------------------------
+tides      :   -67.4    17.8    85.2   -29.2
+atm.press. :     0.0     0.0     0.0     0.0
+height     :    34.3    42.6     8.3    39.7
+pol. motion:     0.0     0.0     0.0     0.0
+g_dot      :     0.0     0.0     0.0     0.0
+cal.error  :    -3.6    -3.5     0.1    -3.6
+
+ Number of observations in list:  22
+Average epoch of the campaign :  2010.2098
+----------------------------------------------
+
+ Total no of observation lists:   1
+ Total no of observation files:   1
+
+Program has used  0.13 seconds of CPU time!
+This includes  0.09 seconds of user time and  0.03 seconds of system time.

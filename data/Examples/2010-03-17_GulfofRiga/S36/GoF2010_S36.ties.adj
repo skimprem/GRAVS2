@@ -1,0 +1,56 @@
+  from     /      to         adj.dg(mGal)+/- std(uGal)
+ReiuGR       --> Võiste          -14.3684 +/-    6.5  
+ReiuGR       --> Vana1111        -10.7727 +/-   16.3  
+ReiuGR       --> Rannametsa      -30.2268 +/-    6.6  
+ReiuGR       --> Sunset          -10.0201 +/-    6.9  
+ReiuGR       --> Uus2            -12.6261 +/-   16.5  
+ReiuGR       --> Vana1121        -19.7060 +/-   11.7  
+ReiuGR       --> Vana1116        -11.1949 +/-   16.4  
+ReiuGR       --> Kalamees         -9.5585 +/-   16.3  
+ReiuGR       --> Vana1109         -8.9613 +/-   16.3  
+
+Võiste       --> Vana1111          3.5957 +/-   17.2  
+Võiste       --> Rannametsa      -15.8584 +/-    8.0  
+Võiste       --> Sunset            4.3483 +/-    9.0  
+Võiste       --> Uus2              1.7423 +/-   17.5  
+Võiste       --> Vana1121         -5.3376 +/-   12.9  
+Võiste       --> Vana1116          3.1735 +/-   17.3  
+Võiste       --> Kalamees          4.8099 +/-   17.2  
+Võiste       --> Vana1109          5.4071 +/-   17.1  
+
+Vana1111     --> Rannametsa      -19.4541 +/-   17.2  
+Vana1111     --> Sunset            0.7526 +/-   17.2  
+Vana1111     --> Uus2             -1.8534 +/-   22.8  
+Vana1111     --> Vana1121         -8.9332 +/-   19.7  
+Vana1111     --> Vana1116         -0.4222 +/-   22.7  
+Vana1111     --> Kalamees          1.2142 +/-   22.7  
+Vana1111     --> Vana1109          1.8114 +/-   22.7  
+
+Rannametsa   --> Sunset           20.2067 +/-    9.1  
+Rannametsa   --> Uus2             17.6007 +/-   17.6  
+Rannametsa   --> Vana1121         10.5209 +/-   13.0  
+Rannametsa   --> Vana1116         19.0319 +/-   17.4  
+Rannametsa   --> Kalamees         20.6683 +/-   17.3  
+Rannametsa   --> Vana1109         21.2655 +/-   17.2  
+
+Sunset       --> Uus2             -2.6060 +/-   17.2  
+Sunset       --> Vana1121         -9.6859 +/-   12.9  
+Sunset       --> Vana1116         -1.1748 +/-   17.2  
+Sunset       --> Kalamees          0.4616 +/-   17.2  
+Sunset       --> Vana1109          1.0588 +/-   17.2  
+
+Uus2         --> Vana1121         -7.0799 +/-   19.7  
+Uus2         --> Vana1116          1.4312 +/-   22.8  
+Uus2         --> Kalamees          3.0676 +/-   22.8  
+Uus2         --> Vana1109          3.6648 +/-   22.8  
+
+Vana1121     --> Vana1116          8.5110 +/-   19.7  
+Vana1121     --> Kalamees         10.1474 +/-   19.7  
+Vana1121     --> Vana1109         10.7446 +/-   19.7  
+
+Vana1116     --> Kalamees          1.6364 +/-   22.7  
+Vana1116     --> Vana1109          2.2336 +/-   22.8  
+
+Kalamees     --> Vana1109          0.5972 +/-   22.7  
+
+

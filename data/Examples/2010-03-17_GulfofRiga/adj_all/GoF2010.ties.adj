@@ -1,0 +1,79 @@
+  from     /      to         adj.dg(mGal)+/- std(uGal)
+ReiuGR       --> Võiste          -14.3728 +/-   12.1  
+ReiuGR       --> Vana1111        -10.7761 +/-   35.5  
+ReiuGR       --> Rannametsa      -30.2537 +/-   11.8  
+ReiuGR       --> vana-1118       -39.7912 +/-   38.0  
+ReiuGR       --> vana-1112       -14.3963 +/-   50.5  
+ReiuGR       --> Sunset          -10.0236 +/-   15.1  
+ReiuGR       --> Uus2            -12.6276 +/-   35.8  
+ReiuGR       --> Vana1121        -19.7092 +/-   25.4  
+ReiuGR       --> Vana1116        -11.1976 +/-   35.5  
+ReiuGR       --> Kalamees         -9.5617 +/-   35.5  
+ReiuGR       --> Vana1109         -8.9652 +/-   35.4  
+
+Võiste       --> Vana1111          3.5967 +/-   36.8  
+Võiste       --> Rannametsa      -15.8809 +/-   12.0  
+Võiste       --> vana-1118       -25.4184 +/-   36.0  
+Võiste       --> vana-1112        -0.0234 +/-   48.6 !
+Võiste       --> Sunset            4.3492 +/-   18.2  
+Võiste       --> Uus2              1.7453 +/-   37.4  
+Võiste       --> Vana1121         -5.3364 +/-   27.3  
+Võiste       --> Vana1116          3.1752 +/-   37.0  
+Võiste       --> Kalamees          4.8112 +/-   36.9  
+Võiste       --> Vana1109          5.4076 +/-   36.7  
+
+Vana1111     --> Rannametsa      -19.4775 +/-   36.7  
+Vana1111     --> vana-1118       -29.0150 +/-   51.2  
+Vana1111     --> vana-1112        -3.6201 +/-   61.0  
+Vana1111     --> Sunset            0.7525 +/-   37.5  
+Vana1111     --> Uus2             -1.8514 +/-   49.6  
+Vana1111     --> Vana1121         -8.9331 +/-   42.8  
+Vana1111     --> Vana1116         -0.4215 +/-   49.4  
+Vana1111     --> Kalamees          1.2145 +/-   49.4  
+Vana1111     --> Vana1109          1.8109 +/-   49.4  
+
+Rannametsa   --> vana-1118        -9.5375 +/-   34.9  
+Rannametsa   --> vana-1112        15.8574 +/-   47.6  
+Rannametsa   --> Sunset           20.2301 +/-   18.2  
+Rannametsa   --> Uus2             17.6261 +/-   37.4  
+Rannametsa   --> Vana1121         10.5445 +/-   27.2  
+Rannametsa   --> Vana1116         19.0561 +/-   36.9  
+Rannametsa   --> Kalamees         20.6920 +/-   36.8  
+Rannametsa   --> Vana1109         21.2885 +/-   36.6  
+
+vana-1118    --> vana-1112        25.3949 +/-   48.3  
+vana-1118    --> Sunset           29.7675 +/-   40.2  
+vana-1118    --> Uus2             27.1636 +/-   51.9  
+vana-1118    --> Vana1121         20.0820 +/-   44.9  
+vana-1118    --> Vana1116         28.5935 +/-   51.4  
+vana-1118    --> Kalamees         30.2295 +/-   51.3  
+vana-1118    --> Vana1109         30.8260 +/-   51.1  
+
+vana-1112    --> Sunset            4.3726 +/-   52.1  
+vana-1112    --> Uus2              1.7687 +/-   61.6  
+vana-1112    --> Vana1121         -5.3129 +/-   55.9  
+vana-1112    --> Vana1116          3.1986 +/-   61.2  
+vana-1112    --> Kalamees          4.8346 +/-   61.1  
+vana-1112    --> Vana1109          5.4311 +/-   60.9  
+
+Sunset       --> Uus2             -2.6039 +/-   37.5  
+Sunset       --> Vana1121         -9.6856 +/-   28.2  
+Sunset       --> Vana1116         -1.1740 +/-   37.5  
+Sunset       --> Kalamees          0.4620 +/-   37.5  
+Sunset       --> Vana1109          1.0584 +/-   37.6  
+
+Uus2         --> Vana1121         -7.0816 +/-   42.9  
+Uus2         --> Vana1116          1.4299 +/-   49.5  
+Uus2         --> Kalamees          3.0659 +/-   49.5  
+Uus2         --> Vana1109          3.6624 +/-   49.6  
+
+Vana1121     --> Vana1116          8.5116 +/-   42.8  
+Vana1121     --> Kalamees         10.1476 +/-   42.8  
+Vana1121     --> Vana1109         10.7440 +/-   42.8  
+
+Vana1116     --> Kalamees          1.6360 +/-   49.4  
+Vana1116     --> Vana1109          2.2324 +/-   49.5  
+
+Kalamees     --> Vana1109          0.5965 +/-   49.4  
+
+

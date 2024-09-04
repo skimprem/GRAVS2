@@ -1,0 +1,108 @@
+2022-01-04, 23:07:32.83
+-------------------------------------------------------
+*** GRREDU3, ver. 2021-03-03 ***
+ ------------------------------------------------------
+ Insert timezone, epoch:
+  timezone = 0: UT
+           =+2: in Estonia (+3 in Summer)
+  epoch = YYYY-MM-DD - important for temporal gravity (gdot) correction
+  0  2000-01-01
+ Epoch for computations:  2000.00273
+ ------------------------------------------------------
+ Insert ltide,lpres,lfair,ltime,lcali,lpmot:
+ T T T T T F
+ No polar motion correction applied!
+ ------------------------------------------------------
+ Insert iprint,imodel,irigid:
+ NB! Suggested values are 0 2 0 -> tidal potential development table not printed + TAMURA(1987) development with 1200 waves + elastic Earth model tides
+ 0 2 0 -> Tidal potential development used: TAMURA 1987  
+ ------------------------------------------------------
+ Insert single admittance value pcoef [uGal/hPa] for the reduction of the atm.pressure (e.g. -0.3):
+ Reduction of the atm.pressure using the coef. -0.3
+ ------------------------------------------------------
+ Read input files...
+ station coordinate file:
+d:\GRAVS2\share\coords_NKG16gdot.dat                                                                                                                                                                                                                           
+ station tide param.file: 
+d:\GRAVS2\share\coords.tide                                                                                                                                                                                                                                    
+  ETCPOT.DAT file: 
+d:\GRAVS2\share\ETCPOT.DAT                                                                                                                                                                                                                                     
+  IERS(C04) time series file (for polar motion correction): 
+d:\GRAVS2\share\eopc04.2000-now                                                                                                                                                                                                                                
+  LCR calibr. table file: 
+d:\GRAVS2\share\LCRmeter.tab                                                                                                                                                                                                                                   
+  gravimeter param. file: 
+d:\GRAVS2\share\gmeters.par                                                                                                                                                                                                                                    
+Read obs.files (max.150 files per project)...
+ ------------------------------------------------------
+
+input file no   1 : d:\GRAVS2\data\Examples\2010_Calibration\2010_Parnu_base\S36\2010-04-22_S36.obs                                                                                                                                                                                
+output file: 2010-04-22_S36.redu                                                                                                                                                                                                                                            
+
+ NB! All times in UT
+
+# S- 36   PARNU            2010 Maa-amet T.OJA                                  
+ Instrument number:  36
+Position of gravimeter reference point:  211.0 mm
+ Degree of calibration function= 1
+ Linear/polynomial calibration correction function:
+degree, term =   1  0.000098
+
+ReiuGR      : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3238.00    0.00
+Accordingly, parameters with CGS units: -323.80 uGal/m,     0.00 uGal/m^2
+
+RistikülaGR : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3330.00    0.00
+Accordingly, parameters with CGS units: -333.00 uGal/m,     0.00 uGal/m^2
+
+LodjaGR     : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3200.00    0.00
+Accordingly, parameters with CGS units: -320.00 uGal/m,     0.00 uGal/m^2
+
+AreGR       : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3089.00    0.00
+Accordingly, parameters with CGS units: -308.90 uGal/m,     0.00 uGal/m^2
+
+P-JaagupiGR1: inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3165.00    0.00
+Accordingly, parameters with CGS units: -316.50 uGal/m,     0.00 uGal/m^2
+
+Correction(uGal) min     max   range  average
+----------------------------------------------
+tides      :   -60.7     1.2    61.9   -39.9
+atm.press. :    -3.6    -3.1     0.5    -3.4
+height     :    34.6    37.6     3.0    36.2
+pol. motion:     0.0     0.0     0.0     0.0
+g_dot      :     2.5     3.5     1.0     2.9
+cal.error  :    -0.7    -0.7     0.0    -0.7
+
+ Number of observations in list:  84
+Average epoch of the campaign :  2010.3081
+----------------------------------------------
+
+input file no   2 : d:\GRAVS2\data\Examples\2010_Calibration\2010_Parnu_base\S36\2010-04-23_S36.obs                                                                                                                                                                                
+output file: 2010-04-23_S36.redu                                                                                                                                                                                                                                            
+
+ NB! All times in UT
+
+# S- 36   PARNU            2010 Maa-amet T.OJA                                  
+ Instrument number:  36
+Position of gravimeter reference point:  211.0 mm
+ Degree of calibration function= 1
+ Linear/polynomial calibration correction function:
+degree, term =   1  0.000098
+
+Correction(uGal) min     max   range  average
+----------------------------------------------
+tides      :   -57.1   -42.7    14.4   -50.2
+atm.press. :    -2.8    -2.0     0.8    -2.4
+height     :    35.9    36.7     0.8    36.3
+pol. motion:     0.0     0.0     0.0     0.0
+g_dot      :     2.5     3.5     1.0     3.0
+cal.error  :    -0.7    -0.7     0.0    -0.7
+
+ Number of observations in list:  62
+Average epoch of the campaign :  2010.3109
+----------------------------------------------
+
+ Total no of observation lists:   2
+ Total no of observation files:   2
+
+Program has used  0.19 seconds of CPU time!
+This includes  0.16 seconds of user time and  0.03 seconds of system time.

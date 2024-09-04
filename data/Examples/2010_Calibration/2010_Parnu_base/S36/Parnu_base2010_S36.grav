@@ -1,0 +1,37 @@
+# Adjusted results for project: Parnu_base2010_S36.proj                                                                                                                                                                                                                                        
+
+# ======= Fixed stations and adjustment residuals (mGal) =======
+# seq   stat      fix g   sigma   weight        adj g       res  statname
+# no      ID             (sc_std=1/  1.0)
+  1    80006  981772.1920 0.0080    0.06    981772.1920   0.0000  ReiuGR      
+
+# ======= Adjusted results with standard deviations (mGal) ======
+# seq    stat     gravity     std      statname
+# no       ID             (sc_std=  1.0)
+   1    80014  981804.8000  0.0083     AreGR       
+   2    80035  981737.7902  0.0083     LodjaGR     
+   3    80046  981819.8906  0.0083     P-JaagupiGR1
+   4    80052  981754.5196  0.0083     RistikülaGR 
+
+=== Statistics of adjustment ===
+ Adjustment observations:   144
+ Stations:                    5
+ Total unknowns:             12
+ Degrees of freedom:        132
+ SIGMA1 (apriori st.dev. of unit weight, mGal)    :   0.0020
+ SIGMA2 (aposteriori st.dev. of unit weight, mGal):   0.0021
+
+=== Statistical tests ===
+ Confidence level:      0.950
+
+== Critical t-value for statistical parameter testing: t-crit=  1.98
+ NB! If t-stat > t-crit -> parameter significant, else with " ! " mark.
+
+== Chi-square test of the SIGMA1 (variance factor) ==
+ Statistic (norm. with dof): X^2 =  1.06
+                 X^2 lower value =  0.77
+                 X^2 upper value =  1.26  ->  test PASSED!
+
+== Information Criteria AIC, BIC as relative measures
+== to select the best adjustment (the lower is better):
+ # AIC =     -55.14, BIC =     -16.54

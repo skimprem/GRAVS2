@@ -1,0 +1,1 @@
+./../Wzz21.e < wzz2.inp >wzz2.out

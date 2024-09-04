@@ -1,0 +1,327 @@
+2022-01-05,  3:38:40.37
+-------------------------------------------------------
+*** GRREDU3, ver. 2021-03-03 ***
+ ------------------------------------------------------
+ Insert timezone, epoch:
+  timezone = 0: UT
+           =+2: in Estonia (+3 in Summer)
+  epoch = YYYY-MM-DD - important for temporal gravity (gdot) correction
+  0  2000-01-01
+ Epoch for computations:  2000.00273
+ ------------------------------------------------------
+ Insert ltide,lpres,lfair,ltime,lcali,lpmot:
+ T T T T T F
+ No polar motion correction applied!
+ ------------------------------------------------------
+ Insert iprint,imodel,irigid:
+ NB! Suggested values are 0 2 0 -> tidal potential development table not printed + TAMURA(1987) development with 1200 waves + elastic Earth model tides
+ 0 2 0 -> Tidal potential development used: TAMURA 1987  
+ ------------------------------------------------------
+ Insert single admittance value pcoef [uGal/hPa] for the reduction of the atm.pressure (e.g. -0.3):
+ Reduction of the atm.pressure using the coef. -0.3
+ ------------------------------------------------------
+ Read input files...
+ station coordinate file:
+d:\GRAVS2\share\coords_NKG16gdot.dat                                                                                                                                                                                                                           
+ station tide param.file: 
+d:\GRAVS2\share\coords.tide                                                                                                                                                                                                                                    
+  ETCPOT.DAT file: 
+d:\GRAVS2\share\ETCPOT.DAT                                                                                                                                                                                                                                     
+  IERS(C04) time series file (for polar motion correction): 
+d:\GRAVS2\share\eopc04.2000-now                                                                                                                                                                                                                                
+  LCR calibr. table file: 
+d:\GRAVS2\share\LCRmeter.tab                                                                                                                                                                                                                                   
+  gravimeter param. file: 
+d:\GRAVS2\share\gmeters.par                                                                                                                                                                                                                                    
+Read obs.files (max.150 files per project)...
+ ------------------------------------------------------
+
+input file no   1 : 2010-04-21_23_G191.obs                                                                                                                                                                                                                                         
+output file: 2010-04-21_23_G191.redu                                                                                                                                                                                                                                        
+
+ NB! All times in UT
+
+# G-191	  Parnu base EMU                                                        
+ Instrument number:  191
+Position of gravimeter reference point:  159.0 mm
+ Degree of calibration function= 1
+ Linear/polynomial calibration correction function:
+degree, term =   1  0.000674
+ Periodic correction was applied using following data:
+  Period(C.U.)  Amplitude(uGal)  Zero Phase
+      70.9412      66.7742     185.7637
+
+ReiuGR      : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3238.00    0.00
+Accordingly, parameters with CGS units: -323.80 uGal/m,     0.00 uGal/m^2
+
+ !Obs (id= 1) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 2) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 3) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 4) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 5) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 6) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 7) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 8) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 9) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+AreGR       : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3089.00    0.00
+Accordingly, parameters with CGS units: -308.90 uGal/m,     0.00 uGal/m^2
+
+ !Obs (id= 10) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 11) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 12) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 13) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 14) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 15) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 16) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 17) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 18) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+P-JaagupiGR1: inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3165.00    0.00
+Accordingly, parameters with CGS units: -316.50 uGal/m,     0.00 uGal/m^2
+
+ !Obs (id= 19) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 20) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 21) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 22) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 23) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 24) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 25) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 26) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 27) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 28) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 29) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 30) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 31) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 32) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 33) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 34) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 35) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 36) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 37) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 38) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 39) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+
+Correction(uGal) min     max   range  average
+----------------------------------------------
+tides      :   -22.6    30.9    53.4     7.2
+atm.press. :     0.0     0.0     0.0     0.0
+height     :    23.6    27.5     3.9    26.4
+pol. motion:     0.0     0.0     0.0     0.0
+g_dot      :     2.8     3.5     0.7     3.0
+cal.error  :    -3.6    -3.5     0.1    -3.6
+
+ Number of observations in list:  39
+Average epoch of the campaign :  2010.3056
+ ------------------------------------------------------
+
+# G-191	  Parnu base EMU                                                        
+ Instrument number:  191
+Position of gravimeter reference point:  159.0 mm
+ Degree of calibration function= 1
+ Linear/polynomial calibration correction function:
+degree, term =   1  0.000674
+ Periodic correction was applied using following data:
+  Period(C.U.)  Amplitude(uGal)  Zero Phase
+      70.9412      66.7742     185.7637
+
+ !Obs (id= 1) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 2) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 3) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 4) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 5) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 6) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 7) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 8) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 9) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 10) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 11) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 12) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+RistikülaGR : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3330.00    0.00
+Accordingly, parameters with CGS units: -333.00 uGal/m,     0.00 uGal/m^2
+
+ !Obs (id= 13) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 14) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 15) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 16) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 17) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 18) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 19) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 20) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 21) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+LodjaGR     : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3200.00    0.00
+Accordingly, parameters with CGS units: -320.00 uGal/m,     0.00 uGal/m^2
+
+ !Obs (id= 22) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 23) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 24) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 25) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 26) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 27) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 28) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 29) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 30) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 31) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 32) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 33) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 34) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 35) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 36) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 37) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 38) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 39) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 40) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 41) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 42) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 43) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 44) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 45) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 46) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 47) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 48) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 49) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 50) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 51) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 52) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 53) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 54) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 55) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 56) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 57) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 58) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 59) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 60) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 61) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 62) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 63) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 64) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 65) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 66) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 67) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 68) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 69) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 70) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 71) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 72) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 73) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 74) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 75) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 76) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 77) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 78) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 79) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 80) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 81) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 82) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 83) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 84) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 85) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 86) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 87) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 88) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 89) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+
+Correction(uGal) min     max   range  average
+----------------------------------------------
+tides      :   -60.6     1.2    61.8   -39.7
+atm.press. :     0.0     0.0     0.0     0.0
+height     :    23.0    28.8     5.8    26.4
+pol. motion:     0.0     0.0     0.0     0.0
+g_dot      :     2.5     3.5     1.0     2.9
+cal.error  :    -3.6    -3.5     0.1    -3.6
+
+ Number of observations in list:  89
+Average epoch of the campaign :  2010.3081
+ ------------------------------------------------------
+
+# G-191	  Parnu base EMU                                                        
+ Instrument number:  191
+Position of gravimeter reference point:  159.0 mm
+ Degree of calibration function= 1
+ Linear/polynomial calibration correction function:
+degree, term =   1  0.000674
+ Periodic correction was applied using following data:
+  Period(C.U.)  Amplitude(uGal)  Zero Phase
+      70.9412      66.7742     185.7637
+
+ !Obs (id= 1) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 2) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 3) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 4) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 5) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 6) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 7) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 8) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 9) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 10) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 11) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 12) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 13) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 14) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 15) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 16) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 17) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 18) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 19) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 20) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 21) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 22) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 23) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 24) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 25) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 26) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 27) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 28) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 29) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 30) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 31) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 32) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 33) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 34) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 35) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 36) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 37) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 38) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 39) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 40) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 41) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 42) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 43) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 44) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 45) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 46) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 47) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 48) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 49) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 50) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 51) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 52) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 53) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 54) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 55) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 56) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 57) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 58) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 59) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 60) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 61) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 62) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 63) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 64) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+ !Obs (id= 65) air pres. value unknown(e.g.-999.9) or invalid -> no correction!
+Correction(uGal) min     max   range  average
+----------------------------------------------
+tides      :   -57.0   -32.8    24.3   -49.1
+atm.press. :     0.0     0.0     0.0     0.0
+height     :    23.8    30.0     6.2    28.3
+pol. motion:     0.0     0.0     0.0     0.0
+g_dot      :     2.5     3.5     1.0     2.8
+cal.error  :    -3.6    -3.5     0.1    -3.6
+
+ Number of observations in list:  65
+Average epoch of the campaign :  2010.3109
+----------------------------------------------
+
+ Total no of observation lists:   3
+ Total no of observation files:   1
+
+Program has used  0.19 seconds of CPU time!
+This includes  0.14 seconds of user time and  0.05 seconds of system time.

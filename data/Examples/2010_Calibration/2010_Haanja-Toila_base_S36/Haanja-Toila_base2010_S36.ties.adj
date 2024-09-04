@@ -1,0 +1,11 @@
+  from     /      to         adj.dg(mGal)+/- std(uGal)
+TõravereAG   --> HaanjaAG        -80.8136 +/-    0.6  
+TõravereAG   --> ToilaAG          89.0847 +/-    0.7  
+TõravereAG   --> LohusuuGR        54.2726 +/-    0.5  
+
+HaanjaAG     --> ToilaAG         169.8984 +/-    1.2  
+HaanjaAG     --> LohusuuGR       135.0862 +/-    1.0  
+
+ToilaAG      --> LohusuuGR       -34.8122 +/-    0.3  
+
+

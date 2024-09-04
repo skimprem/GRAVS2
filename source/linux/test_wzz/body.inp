@@ -1,0 +1,13 @@
+! NB if you want to compute without RMR-method, change that filename or remove it from the folder.
+! Next lines can be commented out with "!" at the beginning of line. However keep format in order!
+# R1		!(R)ectangular parallelepiped body (cuboid)
+1			!density (0 or const)
+-0.6 -0.6 -0.021	!x1,y1,z1 (two sides relative to center(BM) and top height)
+0.6 0.6 0.979	!x2,y2,z2 (opposite sides and bottom height)
+# C1		!(C)ylinder 
+1			!density (0 or const)
+0.98 2.22 1.0   !z1,z2,D - depth of top,bottom and diameter(m)
+# R1		!Empty space around BM
+-1966
+-0.11 -0.11 -0.021
+0.11 0.11 0.011

@@ -1,0 +1,2 @@
+./../Grredu303.e<grredu3.inp> grredu3.log
+./../Gradj305.e <gradj3.inp> gradj3.log

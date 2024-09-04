@@ -1,0 +1,6 @@
+# S-36
+w1 0.25
+d1-2
+!t10     !TARE:       7.0 ±    1.4 uGal     (t-stat=  5.09)  
+t19     !TARE:      -5.0 ±    1.3 uGal     (t-stat=  3.89)
+s50

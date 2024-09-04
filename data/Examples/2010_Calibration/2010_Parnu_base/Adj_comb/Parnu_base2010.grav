@@ -1,0 +1,52 @@
+# Adjusted results for project: Parnu_base2010.proj                                                                                                                                                                                                                                            
+
+# ======= Fixed stations and adjustment residuals (mGal) =======
+# seq   stat      fix g   sigma   weight        adj g       res  statname
+# no      ID             (sc_std=1/  1.0)
+  1    80006  981772.1920 0.0080    0.56    981772.1920   0.0000  ReiuGR      
+
+# ======= Adjusted results with standard deviations (mGal) ======
+# seq    stat     gravity     std      statname
+# no       ID             (sc_std=  1.0)
+   1    80014  981804.8020  0.0080     AreGR       
+   2    80035  981737.7894  0.0080     LodjaGR     
+   3    80046  981819.8901  0.0080     P-JaagupiGR1
+   4    80052  981754.5219  0.0080     RistikülaGR 
+
+ === Calibration results of gravimeters ===
+
+ 36# not calibrated!
+ Instrument no: 191
+ # Terms of polynomial calibration function:
+ # deg.  coef. with std.dev      t-stat.
+  1  0.673860E-03  0.303710E-04    22.2  
+( 1  0.9993261396  0.0000303710)  -> 1st term 1-coef. value (compatible with deg=99 term)
+
+ # Terms of periodical calibration function:
+ # Per.(CU),  x(cos) with st.dev, t-test, y(sin) ith st.dev, t-test [UNIT=uGal]
+   70.9412,   -6.7058 +/-  1.1316,    5.9  -66.4366 +/-  0.8421,   78.9  
+ #..and ampl.A(uGal) and phase for A*sin(2*pi*z/period+phase) with stdev-s
+   70.9412,   66.7742,  185.7637, +/-    0.8835, +/-    0.9435
+
+=== Statistics of adjustment ===
+ Adjustment observations:   319
+ Stations:                    5
+ Total unknowns:             24
+ Degrees of freedom:        295
+ SIGMA1 (apriori st.dev. of unit weight, mGal)    :   0.0060
+ SIGMA2 (aposteriori st.dev. of unit weight, mGal):   0.0059
+
+=== Statistical tests ===
+ Confidence level:      0.950
+
+== Critical t-value for statistical parameter testing: t-crit=  1.97
+ NB! If t-stat > t-crit -> parameter significant, else with " ! " mark.
+
+== Chi-square test of the SIGMA1 (variance factor) ==
+ Statistic (norm. with dof): X^2 =  0.98
+                 X^2 lower value =  0.85
+                 X^2 upper value =  1.17  ->  test PASSED!
+
+== Information Criteria AIC, BIC as relative measures
+== to select the best adjustment (the lower is better):
+ # AIC =     801.28, BIC =     895.41

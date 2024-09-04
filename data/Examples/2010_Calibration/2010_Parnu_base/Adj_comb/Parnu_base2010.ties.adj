@@ -1,0 +1,16 @@
+  from     /      to         adj.dg(mGal)+/- std(uGal)
+ReiuGR       --> AreGR            32.6100 +/-    0.9  
+ReiuGR       --> LodjaGR         -34.4026 +/-    1.1  
+ReiuGR       --> P-JaagupiGR1     47.6981 +/-    0.8  
+ReiuGR       --> RistikülaGR     -17.6701 +/-    0.9  
+
+AreGR        --> LodjaGR         -67.0126 +/-    1.2  
+AreGR        --> P-JaagupiGR1     15.0881 +/-    1.0  
+AreGR        --> RistikülaGR     -50.2801 +/-    1.2  
+
+LodjaGR      --> P-JaagupiGR1     82.1007 +/-    1.2  
+LodjaGR      --> RistikülaGR      16.7325 +/-    1.1  
+
+P-JaagupiGR1 --> RistikülaGR     -65.3682 +/-    1.1  
+
+

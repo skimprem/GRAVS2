@@ -1,0 +1,6 @@
+# G-191
+d1-2     !Enough repetitions for 2nd deg drift
+w5-11 5  !Weight down 5x
+s11      !Seems to be outlier
+s16      !Seems to be outlier
+t19

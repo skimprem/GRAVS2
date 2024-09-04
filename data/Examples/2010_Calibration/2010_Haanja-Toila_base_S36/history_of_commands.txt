@@ -1,0 +1,20 @@
+open GRAVS2.cmd
+
+>cd .\data\Examples\2010_Calibration\2010_Haanja-Toila_base_S36
+
+* obslist text file with the name list of obs files was made manually
+
+i) in folder .\2010_Haanja-Toila_base_S36\
+>reduce -h
+>reduce obslist T
+OR IF grredu3.inp HAS BEEN MADE AFTER 1ST RUN (by script reduce)
+>grredu303e<grredu3.inp>grredu3.log
+
+* redulist with the name list of redu files was made manually
+
+>adjust -h
+>adjust redulist Haanja-Toila_base2010_S36 FIXED T
+OR AFTER 1ST RUN 
+>gradj305e<Haanja-Toila_base2010_S36_gradj3.inp>gradj3.log
+
+* The last lines are repeated after changing adjustment parameters, fixed gravity values etc.

@@ -1,0 +1,37 @@
+# Adjusted results for project: GoF2010_G191.proj                                                                                                                                                                                                                                              
+
+# ======= Fixed stations and adjustment residuals (mGal) =======
+# seq   stat      fix g   sigma   weight        adj g       res  statname
+# no      ID             (sc_std=1/  1.0)
+  1    80006  981772.1920 0.0080    9.77    981772.1920   0.0000  ReiuGR      
+
+# ======= Adjusted results with standard deviations (mGal) ======
+# seq    stat     gravity     std      statname
+# no       ID             (sc_std=  1.0)
+   1 10031601  981757.7094  0.0216     Võiste      
+   2 10031701  981741.8169  0.0186     Rannametsa  
+   3 10031702  981732.2122  0.0321     vana-1118   
+   4 10031703  981757.5717  0.0428     vana-1112   
+
+=== Statistics of adjustment ===
+ Adjustment observations:    21
+ Stations:                    5
+ Total unknowns:              7
+ Degrees of freedom:         14
+ SIGMA1 (apriori st.dev. of unit weight, mGal)    :   0.0250
+ SIGMA2 (aposteriori st.dev. of unit weight, mGal):   0.0253
+
+=== Statistical tests ===
+ Confidence level:      0.950
+
+== Critical t-value for statistical parameter testing: t-crit=  2.14
+ NB! If t-stat > t-crit -> parameter significant, else with " ! " mark.
+
+== Chi-square test of the SIGMA1 (variance factor) ==
+ Statistic (norm. with dof): X^2 =  1.03
+                 X^2 lower value =  0.40
+                 X^2 upper value =  1.87  ->  test PASSED!
+
+== Information Criteria AIC, BIC as relative measures
+== to select the best adjustment (the lower is better):
+ # AIC =      74.10, BIC =      82.45

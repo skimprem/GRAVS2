@@ -1,0 +1,1 @@
+./../CG5form2f.e <sform2.inp > sform2.out

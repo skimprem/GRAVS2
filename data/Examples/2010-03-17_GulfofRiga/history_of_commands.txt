@@ -1,0 +1,24 @@
+Open GRAVS2 terminal 'GRAVS2.cmd'
+
+1) Analysis in folder \2010-03-17_GulfofRiga\S36\
+
+>cd .\data\Examples\2010-03-17_GulfofRiga\S36
+>cg5form 2010-03-17_S36.txt
+>REN add.inf 2010-03-17_S36.inf
+Fill the *.inf file with data
+>cg5form 2010-03-17_S36.txt 2010-03-17_S36.inf
+Use separate coord file for this project, also during processing change in grredu3.inp file: T T T T F F -> T F T F T F 
+>reduce 2010-03-17_S36.obs F ..\coords.txt
+adjustment 1st run (by changing scale for graph 1->3, see ADJ0)
+>adjust 2010-03-17_S36.redu GoF2010_S36
+Fix Reiu station and add parameters into *.par file to improve adjustment results and rerun previous line
+
+>cd ..\G191
+>reduce 2010-03-17_G191.obs F ..\coords.txt
+with change T T T T F F -> T F T F T F 
+>adjust 2010-03-17_G191.redu GoF2010_G191
+
+>cd ..\adj_all
+make name list of redu files, this time with relative paths -> redulist_rel.txt
+>adjust redulist_rel.txt GoF2010 FIXED T
+Repeated many times, modifying S-36, G-191 *.par files...

@@ -1,0 +1,44 @@
+# Adjusted results for project: GulfofRiga_20100317.proj                                                                                                                                                                                                                                       
+
+# ======= Fixed stations and adjustment residuals (mGal) =======
+# seq   stat      fix g   sigma   weight        adj g       res  statname
+# no      ID             (sc_std=1/  1.0)
+  1    80006  981772.2010 0.0300   11.11    981772.2010   0.0000  ReiuGR      
+  2     5332  981747.0200 0.0600  -- not observed -- 
+  3     5312  981750.9600 0.0600  -- not observed -- 
+
+# ======= Adjusted results with standard deviations (mGal) ======
+# seq    stat     gravity     std      statname
+# no       ID             (sc_std=  1.0)
+   1 10031601  981757.8315  0.0312     Võiste      
+   2 10031604  981761.4281  0.0345     Vana1111    
+   3 10031701  981741.9728  0.0312     Rannametsa  
+   4 10031711  981762.1794  0.0441     Sunset      
+   5 10031712  981759.5756  0.0346     Uus2        
+   6 10031713  981752.4950  0.0326     Vana1121    
+   7 10031714  981761.0062  0.0345     Vana1116    
+   8 10031715  981762.6425  0.0345     Kalamees    
+   9 10031717  981763.2394  0.0345     Vana1109    
+
+=== Statistics of adjustment ===
+ Adjustment observations:    32
+ Stations:                   10
+ Total unknowns:             12
+ Degrees of freedom:         20
+ SIGMA1 (apriori st.dev. of unit weight, mGal)    :   0.1000
+ SIGMA2 (aposteriori st.dev. of unit weight, mGal):   0.1018
+
+=== Statistical tests ===
+ Confidence level:      0.950
+
+== Critical t-value for statistical parameter testing: t-crit=  2.09
+ NB! If t-stat > t-crit -> parameter significant, else with " ! " mark.
+
+== Chi-square test of the SIGMA1 (variance factor) ==
+ Statistic (norm. with dof): X^2 =  1.04
+                 X^2 lower value =  0.48
+                 X^2 upper value =  1.71  ->  test PASSED!
+
+== Information Criteria AIC, BIC as relative measures
+== to select the best adjustment (the lower is better):
+ # AIC =     216.67, BIC =     235.73

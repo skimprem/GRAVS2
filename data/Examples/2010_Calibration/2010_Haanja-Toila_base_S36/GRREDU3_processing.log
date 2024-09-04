@@ -1,0 +1,156 @@
+2022-01-04, 21:26:57.50
+-------------------------------------------------------
+*** GRREDU3, ver. 2021-03-03 ***
+ ------------------------------------------------------
+ Insert timezone, epoch:
+  timezone = 0: UT
+           =+2: in Estonia (+3 in Summer)
+  epoch = YYYY-MM-DD - important for temporal gravity (gdot) correction
+  0  2000-01-01
+ Epoch for computations:  2000.00273
+ ------------------------------------------------------
+ Insert ltide,lpres,lfair,ltime,lcali,lpmot:
+ T T T T F F
+ No calibration correction applied!
+ No polar motion correction applied!
+ ------------------------------------------------------
+ Insert iprint,imodel,irigid:
+ NB! Suggested values are 0 2 0 -> tidal potential development table not printed + TAMURA(1987) development with 1200 waves + elastic Earth model tides
+ 0 2 0 -> Tidal potential development used: TAMURA 1987  
+ ------------------------------------------------------
+ Insert single admittance value pcoef [uGal/hPa] for the reduction of the atm.pressure (e.g. -0.3):
+ Reduction of the atm.pressure using the coef. -0.3
+ ------------------------------------------------------
+ Read input files...
+ station coordinate file:
+d:\GRAVS2\share\coords_NKG16gdot.dat                                                                                                                                                                                                                           
+ station tide param.file: 
+d:\GRAVS2\share\coords.tide                                                                                                                                                                                                                                    
+  ETCPOT.DAT file: 
+d:\GRAVS2\share\ETCPOT.DAT                                                                                                                                                                                                                                     
+  IERS(C04) time series file (for polar motion correction): 
+d:\GRAVS2\share\eopc04.2000-now                                                                                                                                                                                                                                
+  LCR calibr. table file: 
+d:\GRAVS2\share\LCRmeter.tab                                                                                                                                                                                                                                   
+  gravimeter param. file: 
+d:\GRAVS2\share\gmeters.par                                                                                                                                                                                                                                    
+Read obs.files (max.150 files per project)...
+ ------------------------------------------------------
+
+input file no   1 : 2010-07-06_S36.obs                                                                                                                                                                                                                                             
+output file: 2010-07-06_S36.redu                                                                                                                                                                                                                                            
+
+ NB! All times in UT
+
+# S- 36   TOIL-HAAN        2010 Maa-amet T.OJA                                  
+ Instrument number:  36
+Position of gravimeter reference point:  211.0 mm
+ Degree of calibration function= 1
+ Linear/polynomial calibration correction function:
+degree, term =   1  0.000098
+
+TõravereAG  : negative gradient value found, thus the link to *.vgg (output of WZZ2) file expected!
+VGG file: d:\GRAVS2\share\vgg-files\TORA_1995-2017.vgg                                                                                                                                                                                                                   
+
+HaanjaAG    : negative gradient value found, thus the link to *.vgg (output of WZZ2) file expected!
+VGG file: d:\GRAVS2\share\vgg-files\Haanja_2008-2019.vgg                                                                                                                                                                                                                 
+
+LohusuuGR   : inserted polynomial model (n=2) parameters for vert.gradient (based on SI units nm/s^2/m, multiplied by -1): 3086.00    0.00
+Accordingly, parameters with CGS units: -308.60 uGal/m,     0.00 uGal/m^2
+
+Correction(uGal) min     max   range  average
+----------------------------------------------
+tides      :   -69.7     9.0    78.8   -40.3
+atm.press. :    -1.3    -0.5     0.8    -0.9
+height     :    35.5    46.9    11.4    40.8
+pol. motion:     0.0     0.0     0.0     0.0
+g_dot      :     0.8     2.9     2.1     2.0
+cal.error  :     0.0     0.0     0.0     0.0
+
+ Number of observations in list:  80
+Average epoch of the campaign :  2010.5139
+----------------------------------------------
+
+input file no   2 : 2010-07-07_S36.obs                                                                                                                                                                                                                                             
+output file: 2010-07-07_S36.redu                                                                                                                                                                                                                                            
+
+ NB! All times in UT
+
+# S- 36   SUUR             2010 Maa-amet T.OJA                                  
+ Instrument number:  36
+Position of gravimeter reference point:  211.0 mm
+ Degree of calibration function= 1
+ Linear/polynomial calibration correction function:
+degree, term =   1  0.000098
+
+ToilaAG     : negative gradient value found, thus the link to *.vgg (output of WZZ2) file expected!
+VGG file: d:\GRAVS2\share\vgg-files\Toila_2008-2017.vgg                                                                                                                                                                                                                  
+
+Correction(uGal) min     max   range  average
+----------------------------------------------
+tides      :   -77.8    63.4   141.2   -17.7
+atm.press. :    -1.2    -0.6     0.6    -0.8
+height     :    35.2    46.9    11.7    40.5
+pol. motion:     0.0     0.0     0.0     0.0
+g_dot      :     0.8     3.4     2.5     2.3
+cal.error  :     0.0     0.0     0.0     0.0
+
+ Number of observations in list:  126
+Average epoch of the campaign :  2010.5165
+----------------------------------------------
+
+input file no   3 : 2010-07-08_S36.obs                                                                                                                                                                                                                                             
+output file: 2010-07-08_S36.redu                                                                                                                                                                                                                                            
+
+ NB! All times in UT
+
+# S- 36   TOIL-HAAN        2010 Maa-amet T.OJA                                  
+ Instrument number:  36
+Position of gravimeter reference point:  211.0 mm
+ Degree of calibration function= 1
+ Linear/polynomial calibration correction function:
+degree, term =   1  0.000098
+
+Correction(uGal) min     max   range  average
+----------------------------------------------
+tides      :   -68.0    82.9   150.9    22.0
+atm.press. :     0.0     0.4     0.3     0.2
+height     :    35.2    47.2    12.0    40.9
+pol. motion:     0.0     0.0     0.0     0.0
+g_dot      :     0.8     2.9     2.1     2.0
+cal.error  :     0.0     0.0     0.0     0.0
+
+ Number of observations in list:  86
+Average epoch of the campaign :  2010.5191
+----------------------------------------------
+
+input file no   4 : 2010-07-09_S36.obs                                                                                                                                                                                                                                             
+output file: 2010-07-09_S36.redu                                                                                                                                                                                                                                            
+
+ NB! All times in UT
+
+# S- 36   SUUR             2010 Maa-amet T.OJA                                  
+ Instrument number:  36
+Position of gravimeter reference point:  211.0 mm
+ Degree of calibration function= 1
+ Linear/polynomial calibration correction function:
+degree, term =   1  0.000098
+
+Correction(uGal) min     max   range  average
+----------------------------------------------
+tides      :   -73.2    96.4   169.6    20.5
+atm.press. :     1.2     1.3     0.1     1.2
+height     :    35.2    45.5    10.3    39.4
+pol. motion:     0.0     0.0     0.0     0.0
+g_dot      :     2.9     3.4     0.4     3.1
+cal.error  :     0.0     0.0     0.0     0.0
+
+ Number of observations in list:  83
+Average epoch of the campaign :  2010.5219
+----------------------------------------------
+
+ Total no of observation lists:   4
+ Total no of observation files:   4
+
+Program has used  0.28 seconds of CPU time!
+This includes  0.27 seconds of user time and  0.02 seconds of system time.

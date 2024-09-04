@@ -1,0 +1,48 @@
+CG5form ver. 2f (2021-03-29)  
+Program to convert Scintrex *.txt file to GRREDU3 obs file
+
+Insert default inf-file values for height (gravimeter and BM),pressure:
+         300           0  -999.89999999999998     
+Insert max time diff.(in hours):
+   8.0000000000000000     
+Insert input-file name (Scintrex txt file):
+2010-03-17_S36.txt                                                                                                                                                                                                                                             
+
+Insert inf file with observation info (optional):
+2010-03-17_S36.inf                                                                                                                                                                                                                                             
+
+
+..output: obs. file: 2010-03-17_S36.obs                                                                                                                                                                                                                                             
+
+ /	Survey name:   	Gulf-of-Rig          14
+ /	Instrument S/N:	36                   17
+ /	Client:        	ELB                   9
+ /	Operator:      	T.OJA                11
+ /	Date:          	2010/ 3/17            7
+ /	Time:          	06:16:12              7
+ /	LONG:        	26.0000000 E            7
+ /	LAT:         	58.4000000 N            6
+ /	ZONE:        	0                       7
+ /	GMT DIFF.:   	0.0                    12
+ /	Gref:			0.000                         7
+ /	Gcal1:		8987.504                      8
+ /	TiltxS:		609.765                      9
+ /	TiltyS:		570.791                      9
+ /	TiltxO:		-45.332                      9
+ /	TiltyO:		65.519                       9
+ /	Tempco:		-0.128                       9
+ /	Drift:		0.575                         8
+ /	DriftTime Start:	06:16:16            18
+ /	DriftDate Start:	2016/03/17          18
+ /	Tide Correction:     NO              18
+ /	Cont. Tilt:         YES              13
+ /	Auto Rejection:     YES              17
+ /	Terrain Corr.:       NO              16
+ /	Seismic Filter:     YES              17
+ /	Raw Data:           YES              11
+          36 Gulf-of-Riga(Survey-on-ice)           2010 ELB     T.OJA           
+No of readings in list:   31
+ Gulf-of-Riga(Survey-on-ice)   ELB     T.OJA              0.0000000000000000     
+        2010           3          17
+
+ program SCform2 terminated OK

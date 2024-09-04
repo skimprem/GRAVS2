@@ -1,0 +1,4 @@
+./../GTPAR.e<gtpar.inp> gtpar.out
+
+NB! Problem to read long path, eg ../../../share/WPARM.DAT
+Solution: move or copy WPARM.DAT to folder where coord files are processed

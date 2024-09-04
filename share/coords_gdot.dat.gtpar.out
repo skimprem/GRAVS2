@@ -1,0 +1,21 @@
+ Program GTPAR interpolates synthetic gravity tide parameters
+ (for 10 wavegroups) from 1 by 1 degree grid of Timmen and Wenzel  (1994)
+ For 13 wavegroups (CTE505) M0S0, J1 and OO1 are added with constant values
+
+.. GTPAR output: tidal waves parameter file (.tide): coords_gdot.tide                                                                
+#    80003 TõravereAG    58.264339  26.463292    71.964
+#    80702 HaanjaAG      57.721700  27.050789   245.470
+#    80704 ToilaAG       59.422270  27.536341    36.469
+#    80006 ReiuGR        58.298770  24.610295     6.288
+#    80014 AreGR         58.509339  24.551215    12.520
+#    80036 LohusuuGR     58.950947  27.045446    34.537
+#    80046 Pärnu-Jaagup  58.613386  24.514195    25.011
+#    80052 RistikülaGR   58.192821  24.762515    18.821
+#    80911 KanepiGR      57.986216  26.759450   142.900
+#    81960 PatasteGR     58.575311  26.757113    77.440
+#    81980 KauksiGR      58.998334  27.226395    36.970
+#    81990 SavernaGR     58.071098  26.737598   131.680
+#    81970 SärjeGR       58.620527  26.784655    50.700
+
+Program has used  0.88 seconds of CPU time!
+This includes  0.84 seconds of user time and  0.03 seconds of system time.

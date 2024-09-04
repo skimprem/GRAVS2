@@ -1,0 +1,103 @@
+*** GRADJ3, ver. 2021-03-03 ***
+**************************************************
+ Insert project file name:
+GulfofRiga_20100317.proj      
+
+ Insert fixed station file name:
+FIXED                         
+
+ Insert new scale factor (uGal/div) for residual graph in .resi file:
+   1.0000000000000000     
+
+ Insert ltest value (T/F) - verbose mode for program testing purposes:
+ F
+
+ Naming output files...
+ 1)           adj.grav file (.grav): GulfofRiga_20100317.grav
+ 2)           adj.resi file (.resi): GulfofRiga_20100317.resi
+ 3) mean adj.resi file (.resi.mean): GulfofRiga_20100317.resi.mean
+ 4)           out-ties file (.ties): GulfofRiga_20100317.ties
+ 5)       adj.ties file (.ties.adj): GulfofRiga_20100317.ties.adj
+ 6)  tr.vector of adj.resi for hist: resid4hist.dat
+ 7)     full cov.matrix file (.cov): GulfofRiga_20100317.cov
+ ------------------------------------------------------
+ Reading adjustment parameters...
+...dtmax,lsc,driftpar
+dtmax       - max. time(hr) between two measurements,tare is set automatically for longer intervals
+lsc =f      - no calibration, =t : calibration correction function is evaluated based on the supplemental *.cal file
+driftpar =0 - no drift estimated, =0.05 - typical constraint, =99 - no constraint on drift
+   6.0000000000000000      F   99.000000000000000     
+
+...sigma, sc_std, confl
+sigma  - apriori standard deviation of unit weight (mGal)
+sc_std - param. to scale st.dev. of fixed and adj g values
+confl  - confidence level for statistical tests (0<=confl<=1)
+  0.10000000000000001        1.0000000000000000       0.94999999999999996     
+
+...rbias, stdevr
+rbias  - should change if bias values are too high or low
+stdevr - apriori standard deviation of readings (mGal)
+   5000.0000000000000        1.0999999999999999E-002
+
+...ldot, epoch
+ldot =T - solve for gravity changes, =F - no gravity change
+epoch   - ref. epoch for gravity change solution (eg 2000-01-01)
+ ldot= F
+Epoch (in decim.yr):  2008-07-31, 2008.58
+ ------------------------------------------------------
+ Reading fixed stations...
+ list of: no,g,sigma (1 .. nfix)
+       80006   981772.20100000000        2.9999999999999999E-002
+        5332   981747.02000000002        5.9999999999999998E-002
+        5312   981750.95999999996        5.9999999999999998E-002
+ Number of fixed stations:           3
+ ------------------------------------------------------
+Read list of reduced reading files (.redu):
+(max. 500 files per project)
+No  1 reading file: 2010-03-17_S36.redu                                                                                                                                                                                                                                            
+Open additional adj. parameter file: 2010-03-17_S36.par                                                                                                                                                                                                                                             
+
+# S- 36   Gulf of Riga     2010 ELB      T.OJA                                                                                                                                                                                                                 
+ Instrument name and number:S  -          36
+ Adjustment parameters(weight/drift/tare/skip etc.):
+ u/w            1   7.7781745930520230E-003
+ u/w            4   5.9999999999999998E-002
+ u/w            6   2.1999999999999999E-002
+ u/w           20   6.5000000000000002E-002
+ u/w           22   7.7781745930520230E-003
+
+ number of observations:           31
+ ------------------------------------------------------
+ ------------------------------------------------------
+Totally read:    31 observations, collected with  1 gravimeters in   10 stations.
+No. of obs. files:   1
+
+ Number of unknowns in adjustment:
+ Station gravity values:     10
+ Change of gravity:           0
+ Bias parameters:             1
+ Drift parameters:            1
+ Calibration parameters:      0
+ Total number of unknowns:   12
+
+ Adjustment, initial assumed std.dev. of readings:   0.100
+ Number of readings in adjustment:                31
+ Total number of observation equations:           32
+ Degr.of freedom (dof=obs.eq-unknowns):           20
+
+ SOLUTION LOOP:            1
+ - solution OK, max loss of digits:  2.3
+ r.m.s. reading residuals (mGal):         0.08175
+ SIGMA single reading =         0.10178 mGal
+
+ SOLUTION LOOP:            2
+ - solution OK, max loss of digits:  2.3
+ r.m.s. and max parameter change:      0.0000000     0.0000000
+ r.m.s. reading residuals (mGal):         0.08175
+ SIGMA single reading =         0.10178 mGal
+
+
+ - sorting results, output files: 
+
+Program has used  0.02 seconds of CPU time!
+This includes  0.00 seconds of user time and  0.02 seconds of system time.

@@ -1,0 +1,148 @@
+*** GRADJ3, ver. 2021-03-03 ***
+**************************************************
+ Insert project file name:
+Haanja-Toila_base2010_S36.proj      
+
+ Insert fixed station file name:
+FIXED                               
+
+ Insert new scale factor (uGal/div) for residual graph in .resi file:
+  1.
+
+ Insert ltest value (T/F) - verbose mode for program testing purposes:
+ F
+
+ Naming output files...
+ 1)           adj.grav file (.grav): Haanja-Toila_base2010_S36.grav
+ 2)           adj.resi file (.resi): Haanja-Toila_base2010_S36.resi
+ 3) mean adj.resi file (.resi.mean): Haanja-Toila_base2010_S36.resi.mean
+ 4)           out-ties file (.ties): Haanja-Toila_base2010_S36.ties
+ 5)       adj.ties file (.ties.adj): Haanja-Toila_base2010_S36.ties.adj
+ 6)  tr.vector of adj.resi for hist: resid4hist.dat
+ 7)     full cov.matrix file (.cov): Haanja-Toila_base2010_S36.cov
+ ------------------------------------------------------
+ Reading adjustment parameters...
+...dtmax,lsc,driftpar
+dtmax       - max. time(hr) between two measurements,tare is set automatically for longer intervals
+lsc =f      - no calibration, =t : calibration correction function is evaluated based on the supplemental *.cal file
+driftpar =0 - no drift estimated, =0.05 - typical constraint, =99 - no constraint on drift
+  6. T  99.
+
+...sigma, sc_std, confl
+sigma  - apriori standard deviation of unit weight (mGal)
+sc_std - param. to scale st.dev. of fixed and adj g values
+confl  - confidence level for statistical tests (0<=confl<=1)
+  0.0015  5.  0.95
+
+...rbias, stdevr
+rbias  - should change if bias values are too high or low
+stdevr - apriori standard deviation of readings (mGal)
+  5000.  0.0015
+
+...ldot, epoch
+ldot =T - solve for gravity changes, =F - no gravity change
+epoch   - ref. epoch for gravity change solution (eg 2000-01-01)
+ ldot= F
+Epoch (in decim.yr):  2008-07-31, 2008.58
+ ------------------------------------------------------
+ Reading fixed stations...
+ list of: no,g,sigma (1 .. nfix)
+ 80003  981759.67  0.003
+ 80702  981678.86  0.004
+ 80704  981848.758  0.004
+ Number of fixed stations: 3
+ ------------------------------------------------------
+Read list of reduced reading files (.redu):
+(max. 500 files per project)
+No  1 reading file: 2010-07-06_S36.redu                                                                                                                                                                                                                                            
+Open additional adj. parameter file: 2010-07-06_S36.par                                                                                                                                                                                                                                             
+
+# S- 36   TOIL-HAAN        2010 Maa-amet T.OJA                                                                                                                                                                                                                 
+ Instrument name and number:S  - 36
+
+Open correction parameters file for gravity meters calibration..
+Haanja-Toila_base2010_S36.cal                                                                                                                                                                                                                                  
+
+ Degree of polynomial calibration func.: 1
+
+ Adjustment parameters(weight/drift/tare/skip etc.):
+ d 1 2
+ s 66
+
+ number of observations:  79
+ ------------------------------------------------------
+No  2 reading file: 2010-07-07_S36.redu                                                                                                                                                                                                                                            
+Open additional adj. parameter file: 2010-07-07_S36.par                                                                                                                                                                                                                                             
+
+# S- 36   SUUR             2010 Maa-amet T.OJA                                                                                                                                                                                                                 
+ Instrument name and number:S  - 36
+ Adjustment parameters(weight/drift/tare/skip etc.):
+ s 1
+ s 2
+ s 3
+ s 4
+ s 5
+ s 6
+ s 7
+ s 8
+
+ number of observations:  118
+ ------------------------------------------------------
+No  3 reading file: 2010-07-08_S36.redu                                                                                                                                                                                                                                            
+Open additional adj. parameter file: 2010-07-08_S36.par                                                                                                                                                                                                                                             
+
+# S- 36   TOIL-HAAN        2010 Maa-amet T.OJA                                                                                                                                                                                                                 
+ Instrument name and number:S  - 36
+ Adjustment parameters(weight/drift/tare/skip etc.):
+ s 21
+ t 56
+ s 63
+ s 67
+
+ number of observations:  83
+ ------------------------------------------------------
+No  4 reading file: 2010-07-09_S36.redu                                                                                                                                                                                                                                            
+Open additional adj. parameter file: 2010-07-09_S36.par                                                                                                                                                                                                                                             
+
+# S- 36   SUUR             2010 Maa-amet T.OJA                                                                                                                                                                                                                 
+ Instrument name and number:S  - 36
+ Adjustment parameters(weight/drift/tare/skip etc.):
+ s 40
+ t 51
+ s 70
+
+ number of observations:  81
+ ------------------------------------------------------
+ ------------------------------------------------------
+Totally read:   361 observations, collected with  1 gravimeters in    4 stations.
+No. of obs. files:   4
+
+ Number of unknowns in adjustment:
+ Station gravity values:      4
+ Change of gravity:           0
+ Bias parameters:             6
+ Drift parameters:            5
+ Calibration parameters:      1
+ Total number of unknowns:   16
+
+ Adjustment, initial assumed std.dev. of readings:   0.002
+ Number of readings in adjustment:       361
+ Total number of observation equations:  364
+ Degr.of freedom (dof=obs.eq-unknowns):  348
+
+ SOLUTION LOOP:  1
+ - solution OK, max loss of digits:  1.5
+ r.m.s. reading residuals (mGal):         0.00152
+ SIGMA single reading =         0.00159 mGal
+
+ SOLUTION LOOP:  2
+ - solution OK, max loss of digits:  1.5
+ r.m.s. and max parameter change:      0.0000000     0.0000000
+ r.m.s. reading residuals (mGal):         0.00152
+ SIGMA single reading =         0.00159 mGal
+
+
+ - sorting results, output files: 
+
+Program has used  0.13 seconds of CPU time!
+This includes  0.08 seconds of user time and  0.05 seconds of system time.

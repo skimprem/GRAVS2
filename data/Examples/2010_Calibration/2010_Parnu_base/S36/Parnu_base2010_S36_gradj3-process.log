@@ -1,0 +1,111 @@
+*** GRADJ3, ver. 2021-03-03 ***
+**************************************************
+ Insert project file name:
+Parnu_base2010_S36.proj      
+
+ Insert fixed station file name:
+FIXED                        
+
+ Insert new scale factor (uGal/div) for residual graph in .resi file:
+  1.
+
+ Insert ltest value (T/F) - verbose mode for program testing purposes:
+ F
+
+ Naming output files...
+ 1)           adj.grav file (.grav): Parnu_base2010_S36.grav
+ 2)           adj.resi file (.resi): Parnu_base2010_S36.resi
+ 3) mean adj.resi file (.resi.mean): Parnu_base2010_S36.resi.mean
+ 4)           out-ties file (.ties): Parnu_base2010_S36.ties
+ 5)       adj.ties file (.ties.adj): Parnu_base2010_S36.ties.adj
+ 6)  tr.vector of adj.resi for hist: resid4hist.dat
+ 7)     full cov.matrix file (.cov): Parnu_base2010_S36.cov
+ ------------------------------------------------------
+ Reading adjustment parameters...
+...dtmax,lsc,driftpar
+dtmax       - max. time(hr) between two measurements,tare is set automatically for longer intervals
+lsc =f      - no calibration, =t : calibration correction function is evaluated based on the supplemental *.cal file
+driftpar =0 - no drift estimated, =0.05 - typical constraint, =99 - no constraint on drift
+  6. F  99.
+
+...sigma, sc_std, confl
+sigma  - apriori standard deviation of unit weight (mGal)
+sc_std - param. to scale st.dev. of fixed and adj g values
+confl  - confidence level for statistical tests (0<=confl<=1)
+  0.002  1.  0.95
+
+...rbias, stdevr
+rbias  - should change if bias values are too high or low
+stdevr - apriori standard deviation of readings (mGal)
+  5000.  0.002
+
+...ldot, epoch
+ldot =T - solve for gravity changes, =F - no gravity change
+epoch   - ref. epoch for gravity change solution (eg 2000-01-01)
+ ldot= F
+Epoch (in decim.yr):  2008-07-31, 2008.58
+ ------------------------------------------------------
+ Reading fixed stations...
+ list of: no,g,sigma (1 .. nfix)
+ 80006  981772.192  0.008
+ Number of fixed stations: 1
+ ------------------------------------------------------
+Read list of reduced reading files (.redu):
+(max. 500 files per project)
+No  1 reading file: d:\GRAVS2\data\Examples\2010_Calibration\2010_Parnu_base\S36\2010-04-22_S36.redu                                                                                                                                                                               
+Open additional adj. parameter file: d:\GRAVS2\data\Examples\2010_Calibration\2010_Parnu_base\S36\2010-04-22_S36.par                                                                                                                                                                                
+
+# S- 36   PARNU            2010 Maa-amet T.OJA                                                                                                                                                                                                                 
+ Instrument name and number:S  - 36
+ Adjustment parameters(weight/drift/tare/skip etc.):
+ d 1 2
+ s 15
+ s 43
+
+ number of observations:  82
+ ------------------------------------------------------
+No  2 reading file: d:\GRAVS2\data\Examples\2010_Calibration\2010_Parnu_base\S36\2010-04-23_S36.redu                                                                                                                                                                               
+Open additional adj. parameter file: d:\GRAVS2\data\Examples\2010_Calibration\2010_Parnu_base\S36\2010-04-23_S36.par                                                                                                                                                                                
+
+# S- 36   PARNU            2010 Maa-amet T.OJA                                                                                                                                                                                                                 
+ Instrument name and number:S  - 36
+ Adjustment parameters(weight/drift/tare/skip etc.):
+ d 1 2
+ t 19
+ s 50
+
+ number of observations:  61
+ ------------------------------------------------------
+ ------------------------------------------------------
+Totally read:   143 observations, collected with  1 gravimeters in    5 stations.
+No. of obs. files:   2
+
+ Number of unknowns in adjustment:
+ Station gravity values:      5
+ Change of gravity:           0
+ Bias parameters:             3
+ Drift parameters:            4
+ Calibration parameters:      0
+ Total number of unknowns:   12
+
+ Adjustment, initial assumed std.dev. of readings:   0.002
+ Number of readings in adjustment:       143
+ Total number of observation equations:  144
+ Degr.of freedom (dof=obs.eq-unknowns):  132
+
+ SOLUTION LOOP:  1
+ - solution OK, max loss of digits:  2.8
+ r.m.s. reading residuals (mGal):         0.00198
+ SIGMA single reading =         0.00206 mGal
+
+ SOLUTION LOOP:  2
+ - solution OK, max loss of digits:  2.8
+ r.m.s. and max parameter change:      0.0000000     0.0000000
+ r.m.s. reading residuals (mGal):         0.00198
+ SIGMA single reading =         0.00206 mGal
+
+
+ - sorting results, output files: 
+
+Program has used  0.06 seconds of CPU time!
+This includes  0.05 seconds of user time and  0.02 seconds of system time.
