@@ -164,9 +164,9 @@ CCC Arrays for coef.vector
 CCC
       logical lslist,lsing(maxn),lsc,ldrift,lcr,lfeedback,ldot,
      .ltest,ltest1,lscintrex
-      character*(maxlen) hdr,hdr1,hdr2
-      character*(maxlen) ifile,parfile,projfile,gfile,rfile,rfile2,
-     .tfile,tafile,calfile,covfile,fixfile
+      character*(maxlen) hdr,hdr1,hdr2, arg
+      character*(maxlen) ifile,parfile,projfile/''/,gfile,rfile,rfile2,
+     .tfile,tafile,calfile,covfile,fixfile/''/,redu_files/''/,help
 C     gnfile
       character stxt(maxn)*12 ,obstxt*12, cplot(15)*13
       character code(maxcode)*1,ch*1,instname*3,instname1*3,fr*7,test*6,
@@ -176,7 +176,7 @@ C     gnfile
 CCC  DATA BLOCK to initialise arrays
       data idproj/10/,idg/11/,idt/12/,idr/13/,idr2/14/,idres/15/,
      1 idcal/16/,idpar/17/,idi/18/,idcov/19/,idtmp/20/,idnost/29/,
-     2 idtmp2/21/,idfix/22/,idta/23/
+     2 idtmp2/21/,idfix/22/,idta/23/,idredu/24/
 C     ,idgn/14/
       data nfix,adt,aobs,aw,atriiv,av,astres,ared/8*0.d0/
       data ltest/.false./,tyhi/'        '/
@@ -189,29 +189,87 @@ CCCCCC gnu f77 intrinsic function parameters
 CCCCCC constant 2*Pi
       pi2 = 8.d0*datan2(1.d0,1.d0)
 C      write(*,*) pi2
-C
+      gsc = 1.0
+
+      help = 'Usage: gradj3 '//
+     .'--proj <projfile> '//
+     .'--fixed <fixedfile> '//
+     .'--gsf <gsc> '//
+     .'--ltest '//
+     .'--redu <redufiles>'  
+
       write(*,'(a)') version
       write(*,'(a)')'**************************************************'
 CCC  Project file with epoch,adj.param.,abs.stations etc.
 C      write(*,*) 'project file (.proj):'
-      write(*,*) 'Insert project file name:'
-      read(*,'(a)',IOSTAT=KODE) projfile
-       if(KODE.ne.0) STOP': Problem with proj.file!'
+
+C      write(*,*) 'Insert project file name:'
+C      read(*,'(a)',IOSTAT=KODE) projfile
+
+      i = 0
+      do while(i < command_argument_count())
+       i = i + 1
+       call get_command_argument(i, arg)
+       select case(arg)
+       case('--proj')
+        i = i + 1
+        call get_command_argument(i, arg)
+        projfile = trim(adjustl(arg)) 
+       case('--fixed')
+        i = i + 1
+        call get_command_argument(i, arg)
+        fixfile = trim(adjustl(arg))
+       case('--gsf')
+        i = i + 1
+        call get_command_argument(i, arg)
+        read(arg, *) gsc
+       case('--ltest')
+        ltest = .true.
+       case('--redu')
+        i = i + 1
+        call get_command_argument(i, arg)
+        redu_files = trim(adjustl(arg))
+        open(idredu, file=redu_files, status='old', action='read')
+      case ('--help')
+        print *, help
+        stop
+       end select
+      end do
+
+C      if(KODE.ne.0) STOP': Problem with proj.file!'
+
+      if (len(trim(projfile)) <= 1) then
+       print *, help
+       stop '"Project file" not provided'
+      end if
+      if (len(trim(fixfile)) <= 1) then
+       print *, help
+       stop '"Fixed file" not provided'
+      end if
+      if (len(trim(redu_files)) <= 1) then
+       print *, help
+       stop '"Reduced files" not provided'
+      end if
+
       k=index(projfile,'.')
       if (k.eq.0) k=index(projfile,' ')
       write(*,'(a)') projfile(1:k+10)
       write(*,*)
-      write(*,*) 'Insert fixed station file name:'
-      read(*,'(a)',IOSTAT=KODE) fixfile
+
+C      write(*,*) 'Insert fixed station file name:'
+C      read(*,'(a)',IOSTAT=KODE) fixfile
+
        if(KODE.ne.0) STOP': Problem with fix.station file!'
       kk=index(fixfile,'.')
       if (kk.eq.0) kk=index(fixfile,' ')
       write(*,'(a)') fixfile(1:k+10)
       write(*,*)
-      write(*,*)
-     1'Insert new scale factor (uGal/div) for residual graph in .resi fi
-     2le:'
-      read(*,*,IOSTAT=KODE) gsc
+C      write(*,*)
+C     1'Insert new scale factor (uGal/div) for residual graph in .resi fi
+C     2le:'
+
+C      read(*,*,IOSTAT=KODE) gsc
+
       if(KODE.ne.0) STOP': Problem with sc.factor value!'
 C      if(KODE.ne.0) then
 C       gsc = 0.010
@@ -221,10 +279,11 @@ C      else
 C      endif
       write(*,*)
 
-      write(*,*)
-     1'Insert ltest value (T/F) - verbose mode for program testing purpo
-     2ses:'
-      read(*,*,IOSTAT=KODE) ltest
+C      write(*,*)
+C     1'Insert ltest value (T/F) - verbose mode for program testing purpo
+C     2ses:'
+C      read(*,*,IOSTAT=KODE) ltest
+
       if(KODE.ne.0) STOP': Problem with ltest value!'
       write(*,*) ltest
       write(*,*)
@@ -362,7 +421,10 @@ CCC  under MS-DOS
       nrfile=0
       write(*,'(a)') 'Read list of reduced reading files (.redu):'
       write(*,'((a),i4,(a))') '(max.',maxfile,' files per project)'
-45    read(*,'(a)',end=51,IOSTAT=KODE) ifile
+
+C     45    read(*,'(a)',end=51,IOSTAT=KODE) ifile
+45    read(idredu,'(a)',end=51,IOSTAT=KODE) ifile
+
 C      write(*,*) 'KODE:', KODE
        if (ifile(1:8).eq.tyhi) goto 45
        nlist = 0
@@ -542,8 +604,8 @@ CCCC Read data from *.par file
         instname1=hdr1(3:kk-1)
 C       write(*,*)'kk',kk
         inst1 = iget(hdr1,kk+1)
-C         write(*,*)'inst1,inst:',inst1,inst
-C         write(*,*)'instname1,instname:',instname1,instname
+C        write(*,*)'inst1,inst:',inst1,inst
+C        write(*,*)'instname1,instname:',instname1,instname
         if (inst1.ne.inst.or.instname1.ne.instname) then
          write(*,515) hdr,hdr1
          stop ': Error in program work! '
