@@ -157,7 +157,7 @@ CCC nmax - max deg for calibration function (polynomial, Fourier series),
 CCC nrc - No of corrections
       parameter (ncmax=500, nmax=10, nrc=6, maxfile=150,maxlen=255)
       character version*(*)
-      parameter (version='*** GRREDU3, ver. 2021-03-03 ***')
+      parameter (version='*** GRREDU3, ver. 2024-11 ***')
 CCC VECTORS, MATRICES
       dimension istat(ncmax),rlat(ncmax),rlon(ncmax),rh(ncmax),
      .r1vgg(ncmax),r2vgg(ncmax),rpn(ncmax),per(nmax),amp(nmax),zer(nmax)
@@ -166,15 +166,16 @@ CCC VECTORS, MATRICES
       dimension rgdot(ncmax),gg(ncmax,ncmax)
       character*12 cstat(ncmax),stxt,clabel(nrc)
       character*(maxlen) cfile,calfile,mfile,tidfile,polfile,etcfile,hdr
-     1,hdr1,ofile,stfile,ifile,vggfile
+     1,hdr1,ofile,stfile,ifile,vggfile,obsfiles
+      character*(500) arg, help
       logical lfeedback,ltest,lcr,ltest1,lscintrex,lvgg(ncmax)
-      logical ltide,lpres,lfree,lpmot,ltime,lcali
+      logical ltide,lpres,lfree,lpmot,ltime,lcali,lepoch
 CCC  variables for intrinsic function ETIME
       real etime,time,lap(2)
 CCC  DATA BLOCK
       data ltide,lpres,lfree,lpmot,ltime,lcali /6*.false./
       data idc/10/,idcal/11/,idm/12/,idtid/13/,idpol/14/
-     1,idi/20/,ido/21/,idstat/22/,idvgg/23/
+     1,idi/20/,ido/21/,idstat/22/,idvgg/23/,idobs/24/
       data caver/nrc*0.d0/,cmax/nrc*-9999/,cmin/nrc*9999/,
      .istat/ncmax*0.d0/
       data clabel/'tides      :','atm.press. :','height     :',
@@ -207,7 +208,146 @@ CCC  ETGTAB block (for tidal correction)
 CCC  PROGRAM MAIN UNIT
 CCC  For program testing (increase verbosity) ltest1 = .true.
       ltest1 = .false.
-C
+      lepoch = .false.
+      iprint = 0
+      imodel = 2
+      irigid = 0
+      pcoef = -0.3d0
+      izone = 0
+      polfile = ''
+      calfile = ''
+      cfile = ''
+      mfile = ''
+      tidfile = ''
+      etcfile = ''
+
+      help = 'Usage: grredu3 '//
+     .'--timezone <int> '//
+     .'--epoch <YYYY-MM-DD> '//
+     .'--ltide '//
+     .'--lpres '//
+     .'--lfree '//
+     .'--ltime '//
+     .'--lcali '//
+     .'--lpmot '//
+     .'--iprint <int> '//
+     .'--imodel <int> '//
+     .'--irigid <int> '//
+     .'--pcoef <float> '//
+     .'--stations <file> '//
+     .'--tides <file> '//
+     .'--etcpot <file> '//
+     .'--eopc04 <file> '//
+     .'--calib_tab <file> '//
+     .'--meters_par <file> '//
+     .'--obs_files <file>'
+
+      print *, 'hi'
+
+      i = 0
+      do while(i < command_argument_count())
+        i = i + 1
+        call get_command_argument(i, arg)
+        select case (arg)
+        case('--timezone')
+          i = i + 1
+          call get_command_argument(i, arg)
+          read(arg, *) izone
+        case('--epoch')
+          i = i + 1
+          call get_command_argument(i, arg)
+          read(arg, '(i4,2(a1,i2))') iyr,ch,imonth,ch,iday
+          call MJD2(iyr,imonth,iday,0,0,0,tt,epoch)
+          lepoch = .true.
+        case('--ltide')
+          ltide = .true.
+        case('--lpres')
+          lpres = .true.
+        case('--lfree')
+          lfree = .true.
+        case('--ltime')
+          ltime = .true.
+        case('--lcali')
+          lcali = .true.
+        case('--lpmot')
+          lpmot = .true.
+        case('--iprint')
+          i = i + 1
+          call get_command_argument(i, arg)
+          read(arg, *) iprint
+        case('--imodel')
+          i = i + 1
+          call get_command_argument(i, arg)
+          read(arg, *) imodel
+        case('--irigid')
+          i = i + 1
+          call get_command_argument(i, arg)
+          read(arg, *) irigid
+        case('--pcoef')
+          i = i + 1
+          call get_command_argument(i, arg)
+          read(arg, *) pcoef
+        case('--stations')
+          i = i + 1
+          call get_command_argument(i, arg)
+          cfile = trim(adjustl(arg))
+        case('--tides')
+          i = i + 1
+          call get_command_argument(i, arg)
+          tidfile = trim(adjustl(arg))
+        case('--etcpot')
+          i = i + 1
+          call get_command_argument(i, arg)
+          etcfile = trim(adjustl(arg))
+        case('--eopc04')
+          i = i + 1
+          call get_command_argument(i, arg)
+          polfile = trim(adjustl(arg)) 
+        case('--calib_tab')
+          i = i + 1
+          call get_command_argument(i, arg)
+          calfile = trim(adjustl(arg))
+        case('--meters_par')
+          i = i + 1
+          call get_command_argument(i, arg)
+          mfile = trim(adjustl(arg))
+        case('--obs_files')
+          i = i + 1
+          call get_command_argument(i, arg)
+          obsfiles = trim(adjustl(arg))
+        end select
+      end do
+
+      if (lepoch .eqv. .false.) then
+        write(*,*) help
+        stop 'ERROR: epoch is required'
+      end if
+
+      if (trim(adjustl(cfile)) == '') then
+        write(*,*) help
+        stop 'ERROR: stations file is required'
+      end if
+
+      if (trim(adjustl(tidfile)) == '') then
+        write(*,*) help
+        stop 'ERROR: tides file is required'
+      end if
+
+      if (trim(adjustl(etcfile)) == '') then
+        write(*,*) help
+        stop 'ERROR: ETCPOT file is required'
+      end if
+
+      if (trim(adjustl(mfile)) == '') then
+        write(*,*) help
+        stop 'ERROR: meters parameters file is required'
+      end if
+
+      if (trim(adjustl(obsfiles)) == '') then
+        write(*,*) help
+        stop 'ERROR: observations files are required'
+      end if
+
       write(*,'(a)') version
       write(*,*)'------------------------------------------------------'
 CCC  read input parameters...
@@ -216,16 +356,16 @@ CCC  read input parameters...
       write(*,*)'          =+2: in Estonia (+3 in Summer)'
       write(*,*)' epoch = YYYY-MM-DD - important for temporal gravity (g
      .dot) correction'
-      read(*,*) izone,stxt
-      read(stxt,'(i4,2(a1,i2))') iyr,ch,imonth,ch,iday
+C     read(*,*) izone,stxt
+C     read(stxt,'(i4,2(a1,i2))') iyr,ch,imonth,ch,iday
       write(*,1100) izone,iyr,imonth,iday
 1100  format(i3,i6,2('-',i2.2))
-      call MJD2(iyr,imonth,iday,0,0,0,tt,epoch)
+C     call MJD2(iyr,imonth,iday,0,0,0,tt,epoch)
       write(*,*) 'Epoch for computations:',epoch
 C
       write(*,*)'------------------------------------------------------'
       write(*,*)'Insert ltide,lpres,lfair,ltime,lcali,lpmot:'
-      read(*,*) ltide,lpres,lfree,ltime,lcali,lpmot
+C     read(*,*) ltide,lpres,lfree,ltime,lcali,lpmot
       write(*,*) ltide,lpres,lfree,ltime,lcali,lpmot
       if(.not.ltide) write(*,*)'No tidal correction applied!'
       if(.not.lpres) write(*,*)'No atm.pressure correction applied!'
@@ -251,7 +391,7 @@ C     1 505 waves'
 C      write(*,*)'IMODEL=2: TAMURA 1987 development with 1200 waves'
 C      write(*,*)'IRIGID = 1 for rigid   Earth model tides'
 C      write(*,*)'IRIGID = 0 for elastic Earth model tides'
-      read(*,*) iprint,imodel,irigid
+C     read(*,*) iprint,imodel,irigid
       write(*,*) iprint,imodel,irigid,' -> Tidal potential development u
      .sed: ',CMODEL(IMODEL+1)
       write(*,*)'------------------------------------------------------'
@@ -264,7 +404,7 @@ CCC Other values
 C      pcoef = -0.3D0
       write(*,*)'Insert single admittance value pcoef [uGal/hPa] for the
      1 reduction of the atm.pressure (e.g. -0.3):'
-      read(*,*) pcoef
+C     read(*,*) pcoef
       write(*,*)'Reduction of the atm.pressure using the coef.',pcoef
 CCC
       nf = 0        !Total no of observation lists
@@ -274,23 +414,23 @@ CCC
 CCC  read input files...
       write(*,*)'Read input files...'
       write(*,'(a)') ' station coordinate file:'
-      read(*,'(a)') cfile
+C     read(*,'(a)') cfile
       write(*,'(a)') cfile
       write(*,'(a)') ' station tide param.file: '
-      read(*,'(a)') tidfile
+C     read(*,'(a)') tidfile
       write(*,'(a)') tidfile
       write(*,'(a)') '  ETCPOT.DAT file: '
-      read(*,'(a)') etcfile
+C     read(*,'(a)') etcfile
       write(*,'(a)') etcfile
       write(*,'(a)') '  IERS(C04) time series file (for polar motion cor
      1rection): '
-      read(*,'(a)') polfile
+C     read(*,'(a)') polfile
       write(*,'(a)') polfile
       write(*,'(a)') '  LCR calibr. table file: '
-      read(*,'(a)') calfile
+C     read(*,'(a)') calfile
       write(*,'(a)') calfile
       write(*,'(a)') '  gravimeter param. file: '
-      read(*,'(a)') mfile
+C     read(*,'(a)') mfile
       write(*,'(a)') mfile
 CCC
       if(lpmot) then
@@ -308,7 +448,9 @@ CCC  First computations
       radeg = 360.d0/pi2
 CCC Read input files with reduced data
 CCCC Program can read file name with full dir path (max.lenght=maxlen)
-75    read(*,'(a)',end=180) ifile
+      open(idobs, file=obsfiles, status='old', iostat=KODE)
+      if(KODE.ne.0) STOP ': Reduced observation file not found!'
+75    read(idobs,'(a)',end=180) ifile
       if (ifile(1:8).eq.'        ') goto 75
       nrfile = nrfile+1
       write(*,500) nrfile,ifile

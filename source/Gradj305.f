@@ -137,6 +137,16 @@ C  Tallinn University of Technology, Estonia). Version gradj -> gradj3
 C  Currently ver. 3.0.x (nonlinear drift, weights, gravity change,
 C  multiple obs.files, polynom., periodical calibration etc.)
 C  Last modif. by T. Oja 2021 (see Gradj_history.txt)
+C
+C  UPGRADE by:
+C     Roman Sermiagin
+C           (2024-11):
+C                 1. added command line arguments:
+C                    - added reading of reduced files
+C                    - added reading of fixed files
+C                    - added reading of project files
+C                 2. added help message
+C     
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
       implicit double precision (a-h,o-z)
 CCC  integer i,j,k,l,m,n
@@ -172,7 +182,7 @@ C     gnfile
       character code(maxcode)*1,ch*1,instname*3,instname1*3,fr*7,test*6,
      .tyhi*8
       character version*(*)
-      parameter (version='*** GRADJ3, ver. 2021-03-03 ***')
+      parameter (version='*** GRADJ3, ver. 2024-11 ***')
 CCC  DATA BLOCK to initialise arrays
       data idproj/10/,idg/11/,idt/12/,idr/13/,idr2/14/,idres/15/,
      1 idcal/16/,idpar/17/,idi/18/,idcov/19/,idtmp/20/,idnost/29/,
