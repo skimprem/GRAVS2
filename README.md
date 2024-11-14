@@ -74,7 +74,7 @@ Grredu304 [OPTION]... [PARAMETER]...
 
 ```
 
-For a brief help on the utilities, use the -h or --help option.
+<!-- For a brief help on the utilities, use the -h or --help option. -->
 
 ### Examples
 
