@@ -2,7 +2,7 @@
 
 ## About
 
-The open-source software package GRAVS2 [1] helps to process the data of relative
+The open-source software package GRAVS2 ([Oja, 2022](http://dx.doi.org/10.13140/RG.2.2.25386.49603)) helps to process the data of relative
 gravimeters. The processing includes pre-processing (e.g. data conversion of raw
 data), corrections (tides, calibration, height, atmosphere, and polar motion),
 the weighted least squares adjustment and post-processing (e.g. the modeling of
