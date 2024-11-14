@@ -20,17 +20,26 @@ C  505 waves, TAMURA 1987 with 1200 waves) for a number of different
 C  tidal components using observed or estimated (e.g. by a body
 C  tide and ocean tide model) tidal parameters.
 C
-C  GRREDU3 program input:
-C  timezone,epoch
-C  ltide,lpres,lfree,ltime,lcali,lpmot
-C  iprint,imodel,irigid
-C  pcoef
-C  <stations' coordinate and param.file>
-C  <stations' tidal wave parameter file>
-C  <IERS time series (C04) file>
-C  <inst. calibration table file>
-C  <inst. parameters file>
-C  <raw observation file>
+C  Usage: grredu3 \
+C      --timezone <int> \
+C      --epoch <YYYY-MM-DD> \
+C      --ltide \
+C      --lpres \
+C      --lfree \
+C      --ltime \
+C      --lcali \
+C      --lpmot \
+C      --iprint <int> \
+C      --imodel <int> \
+C      --irigid <int> \
+C      --pcoef <float> \
+C      --stations <file> \
+C      --tides <file> \
+C      --etcpot <file> \
+C      --eopc04 <file> \
+C      --calib_tab <file> \
+C      --meters_par <file> \
+C      --obs_files <file>
 C
 C  where
 C  timezone: 0 = UT, 1 = MET, 2 = MST, -2 = Greenland summer time etc.
@@ -148,6 +157,11 @@ C  RF feb 1993. Based on older Algol programs, first programmed 1978.
 C  Ver. 1.1 - Y2K fix June 2000, rf (Last update by Rene Frosberg)
 C  Upgraded+updated continuously from 2000 to 2019 (ver. 2.0..3.x) by
 C  T.Oja/ELB. Latest updates in 2021
+C
+C  Upgraded by Roman Sermiagin in 2024-11
+C      - added command line arguments
+C      - added short help
+C
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCC  declaring, integer i,j,k,l,m,n
       implicit double precision (a-h,o-z)
@@ -241,8 +255,6 @@ CCC  For program testing (increase verbosity) ltest1 = .true.
      .'--calib_tab <file> '//
      .'--meters_par <file> '//
      .'--obs_files <file>'
-
-      print *, 'hi'
 
       i = 0
       do while(i < command_argument_count())
