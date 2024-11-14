@@ -1,12 +1,12 @@
-# The GRAVS2 package to process the relative gravity data
+# GRAVS2 software for adjustment of relative gravity data
 
 ## About
 
-The open-source software package GRAVS2 [1] helps to process the data of relative
+The open-source software package GRAVS2 ([Oja, 2022](http://dx.doi.org/10.13140/RG.2.2.25386.49603)) helps to process the data of relative
 gravimeters. The processing includes pre-processing (e.g. data conversion of raw
 data), corrections (tides, calibration, height, atmosphere, and polar motion),
 the weighted least squares adjustment and post-processing (e.g. the modeling of
-local vertical gradient). A detailed PDF manual was compiled to explain the
+local vertical gradient). A detailed [PDF manual](./doc/GRAVS2_manual_20210603.pdf) was compiled to explain the
 methods, options, input parameters with several examples. The installation file
 contains source codes (in Fortran 77), precompiled binaries (e.g.
 for windows and linux) and example data. This is free software, distributed in
