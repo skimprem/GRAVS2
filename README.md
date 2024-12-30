@@ -1,4 +1,4 @@
-# GRAVS2 software for adjustment of relative gravity data
+# GRAVS2 software for adjustment of relative gravity data (Upgraded Version)
 
 ## About
 
